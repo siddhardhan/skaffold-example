@@ -5,10 +5,10 @@
 ![Alt text](./images/architecture.png "Skaffold Architecture")
 
 ## Getting Started
-Install Docker - https://www.docker.com/get-started
-Install kubectl - https://kubernetes.io/docs/tasks/tools/install-kubectl/
-Install Minikube - https://kubernetes.io/docs/tasks/tools/install-minikube/
-Install skaffold - https://skaffold.dev/docs/getting-started/#installing-skaffold
+* Install Docker - https://www.docker.com/get-started 
+* Install kubectl - https://kubernetes.io/docs/tasks/tools/install-kubectl/ 
+* Install Minikube - https://kubernetes.io/docs/tasks/tools/install-minikube/ 
+* Install skaffold - https://skaffold.dev/docs/getting-started/#installing-skaffold 
 
 ##Workflows
 ### example1
