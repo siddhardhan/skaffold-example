@@ -5,6 +5,9 @@ build:
     gitCommit: {}
   artifacts:
   - image: gcr.io/k8s-skaffold/skaffold-example
+  local:
+    useDockerCLI: false
+    useBuildkit: false
 deploy:
   kubectl:
     manifests:
