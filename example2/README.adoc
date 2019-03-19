@@ -3,6 +3,7 @@
 
 This is a simple example based on
 
-* *building* a single go file app and with a multistage `Dockerfile` using local docker to build
+* *building* a single go file app and with a multistage `Dockerfile` using kaniko and minikube
 * *tagging* using the default tagPolicy (`gitCommit`)
 * *deploying* a single container pod using `kubectl`
+

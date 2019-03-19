@@ -1,0 +1,20 @@
+apiVersion: skaffold/v1beta7
+kind: Config
+build:
+  tagPolicy:
+    gitCommit: {}
+  artifacts:
+  - image: index.docker.io/siddhardhan/kaniko-example
+    kaniko:
+      buildContext:
+        localDir: {}
+      cache: {}
+  cluster:
+    namespace: default
+    dockerConfig:
+      path: ~/.docker/config.json
+      secretName: regcred
+deploy:
+  kubectl:
+    manifests:
+      - k8s-*

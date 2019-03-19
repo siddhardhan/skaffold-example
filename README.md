@@ -16,6 +16,6 @@
 - Tagging using the default tagPolicy (gitCommit)
 - Deploying a single container pod using kubectl
 ### example2
-- Building a single go file app using kaniko on Minikube
+- Building a single go file app using kaniko and Minikube
 - Tagging using the default tagPolicy (gitCommit)
 - Deploying a single container pod using kubectl

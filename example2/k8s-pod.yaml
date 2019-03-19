@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: getting-started
+  labels:
+    app: getting-started
+spec:
+  containers:
+  - name: getting-started
+    image: index.docker.io/siddhardhan/kaniko-example
