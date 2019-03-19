@@ -8,9 +8,12 @@ build:
     kaniko:
       buildContext:
         localDir: {}
-      cache: {}
+      cache: 
+        repo: index.docker.io/siddhardhan/kaniko-example-cache
   cluster:
     namespace: default
+    pullSecret: ~/.docker/config.json
+    pullSecretName: kaniko-secret
     dockerConfig:
       path: ~/.docker/config.json
       secretName: regcred
