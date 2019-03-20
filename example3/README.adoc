@@ -37,7 +37,7 @@ build:
           - containerPort: 8080
 ----
 
-* Set REGISTRY_USERNAME and REGISTRY_USERNAME environment variables to upload the images to your repository
+* Set *REGISTRY_USERNAME* and *REGISTRY_USERNAME* environment variables to upload the images to your repository
 
 [source,bash]
 ----
