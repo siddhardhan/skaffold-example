@@ -5,7 +5,8 @@ Jib is one of the supported builders in Skaffold.
 [Jib](https://github.com/GoogleContainerTools/jib) builds Docker and OCI images
 for your Java applications and is available as plugins for Maven and Gradle.
 
-The way you configure it in `skaffold.yaml` is the following build stanza:
+### How to run
+* Edit skaffold.yaml to update image details 
 
 [source,yaml]
 ----
@@ -19,9 +20,23 @@ build:
     push: true
 ----
 
-### How to run
-* Edit skaffold.yaml to update image details 
 * Edit k8s/web.yaml to update image details 
+
+[source,yaml]
+----
+...
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: index.docker.io/siddhardhan/skaffold-jib #update to your repo
+        ports:
+          - containerPort: 8080
+----
+
 * Set REGISTRY_USERNAME and REGISTRY_USERNAME environment variables to upload the images to your repository
 
 [source,bash]
