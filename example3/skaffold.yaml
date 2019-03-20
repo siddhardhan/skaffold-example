@@ -1,0 +1,13 @@
+apiVersion: skaffold/v1beta7
+kind: Config
+build:
+  artifacts:
+  - image: index.docker.io/siddhardhan/skaffold-jib
+    jibMaven: {}
+  local:
+    push: true
+# optional profile to run the jib build on Google Cloud Build
+profiles:
+  - name: gcb
+    build:
+      googleCloudBuild: {}
