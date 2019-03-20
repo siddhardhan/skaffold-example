@@ -19,3 +19,7 @@
 - Building a single go file app using kaniko and Minikube
 - Tagging using the default tagPolicy (gitCommit)
 - Deploying a single container pod using kubectl
+### example3
+- Building a maven module using jib locally and pushing the image to docker hub
+- Tagging using the default tagPolicy (gitCommit)
+- Deploying a single container pod using kubectl

@@ -19,4 +19,20 @@ build:
     push: true
 ----
 
+###How to run
+- Edit skaffold.yaml to update image details 
+- Edit k8s/web.yaml to update image details 
+- Set REGISTRY_USERNAME and REGISTRY_USERNAME environment variables to upload the images to your repository
+[source, bash]
+---
+export REGISTRY_USERNAME=<userId>
+export REGISTRY_PASSWORD=<password>
+--- 
+- Run skaffold.
+[source, bash]
+---
+skaffold dev
+--- 
+
+
 
