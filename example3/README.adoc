@@ -9,11 +9,14 @@ The way you configure it in `skaffold.yaml` is the following build stanza:
 
 [source,yaml]
 ----
+apiVersion: skaffold/v1beta7
+kind: Config
 build:
-     artifacts:
-     - image: gcr.io/k8s-skaffold/skaffold-example
-       context: .
-       jibMaven: {}
+  artifacts:
+  - image: index.docker.io/siddhardhan/skaffold-jib #update to your repo
+    jibMaven: {}
+  local:
+    push: true
 ----
 
 Please note that this example is for a standalone Maven project, where
@@ -21,8 +24,7 @@ all dependencies are resolved from outside. The Jib builder requires
 that the projects are configured to use the Jib plugins for Maven or Gradle.
 Multi-module builds require a bit additional configuration.
 
-ifndef::env-github[]
-==== link:{github-repo-tree}/examples/jib[Example files icon:github[]]
+
 
 [source,yaml, indent=3, title=skaffold.yaml]
 ----
@@ -33,4 +35,4 @@ include::skaffold.yaml[]
 ----
 include::pom.xml[]
 ----
-endif::[]
+
