@@ -19,20 +19,4 @@ build:
     push: true
 ----
 
-Please note that this example is for a standalone Maven project, where
-all dependencies are resolved from outside. The Jib builder requires
-that the projects are configured to use the Jib plugins for Maven or Gradle.
-Multi-module builds require a bit additional configuration.
-
-
-
-[source,yaml, indent=3, title=skaffold.yaml]
-----
-include::skaffold.yaml[]
-----
-
-[source,xml, indent=3, title=pom.xml, syntax=xml]
-----
-include::pom.xml[]
-----
 
