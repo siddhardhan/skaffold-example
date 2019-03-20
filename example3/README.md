@@ -1,5 +1,4 @@
-=== Example: Jib
-:icons: font
+# Example: Jib
 
 Jib is one of the supported builders in Skaffold.
 [Jib](https://github.com/GoogleContainerTools/jib) builds Docker and OCI images
@@ -19,20 +18,22 @@ build:
     push: true
 ----
 
-###How to run
+### How to run
 - Edit skaffold.yaml to update image details 
 - Edit k8s/web.yaml to update image details 
 - Set REGISTRY_USERNAME and REGISTRY_USERNAME environment variables to upload the images to your repository
-[source, bash]
----
+
+[source,bash]
+----
 export REGISTRY_USERNAME=<userId>
 export REGISTRY_PASSWORD=<password>
---- 
+----
 - Run skaffold.
-[source, bash]
----
+
+[source,bash]
+----
 skaffold dev
---- 
+----
 
 
 
