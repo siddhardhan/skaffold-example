@@ -11,7 +11,7 @@ build:
       cache: 
         repo: index.docker.io/siddhardhan/kaniko-example-cache
   cluster:
-    namespace: default
+    namespace: kaniko
     pullSecret: ~/.docker/config.json
     pullSecretName: kaniko-secret
     dockerConfig:

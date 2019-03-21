@@ -6,3 +6,53 @@ This is a simple example based on
 * *building* a single go file app and with a multistage `Dockerfile` using local docker to build
 * *tagging* using the default tagPolicy (`gitCommit`)
 * *deploying* a single container pod using `kubectl`
+
+### How to run
+* Edit skaffold.yaml to update image details 
+
+[source,yaml]
+----
+apiVersion: skaffold/v1beta7
+kind: Config
+build:
+  tagPolicy:
+    gitCommit: {}
+  artifacts:
+  - image: index.docker.io/siddhardhan/skaffold-example #update to your repo or doesn't matter it does local build only
+  local:
+    useDockerCLI: false
+    useBuildkit: false
+deploy:
+  kubectl:
+    manifests:
+      - k8s-*
+
+----
+
+* Edit k8s-pod.xml to update image details 
+
+[source,yaml]
+----
+apiVersion: v1
+kind: Pod
+metadata:
+  name: getting-started
+  labels:
+    app: getting-started
+spec:
+  containers:
+  - name: getting-started
+    image: index.docker.io/siddhardhan/skaffold-example #update to your repo or doesn't matter it does local build only
+----
+
+* Run skaffold.
+
+[source,bash]
+----
+skaffold dev
+----
+
+* Edit & Save main.go and check magic of skaffold.
+
+
+

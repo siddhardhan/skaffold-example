@@ -9,6 +9,7 @@
 * Install kubectl - https://kubernetes.io/docs/tasks/tools/install-kubectl/ 
 * Install Minikube - https://kubernetes.io/docs/tasks/tools/install-minikube/ 
 * Install skaffold - https://skaffold.dev/docs/getting-started/#installing-skaffold 
+* Install container-structure-test - https://github.com/GoogleContainerTools/container-structure-test#installation 
 
 ## Workflows
 ### example1
@@ -19,6 +20,7 @@
 - Building a single go file app using kaniko and Minikube
 - Tagging using the default tagPolicy (gitCommit)
 - Deploying a single container pod using kubectl
+- Testing docker image using container-structure-test
 ### example3
 - Building a maven module using jib locally and pushing the image to docker hub
 - Tagging using the default tagPolicy (gitCommit)
