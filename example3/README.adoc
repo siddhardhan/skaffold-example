@@ -51,5 +51,7 @@ export REGISTRY_PASSWORD=<password>
 skaffold dev
 ----
 
+* Go thru jib maven plugin optins https://github.com/GoogleContainerTools/jib/blob/master/jib-maven-plugin/README.md and play around.
+
 
 
